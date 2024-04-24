@@ -1,0 +1,11 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  id: Deploy infrrastructure
+  entrypoint: /bin/sh
+  args:
+  - '-c'
+  - |
+    gcloud deployment-manager deployments create mi-despliegue --config /ci/config.yaml 
+
+options:
+  logging: CLOUD_LOGGING_ONLY
