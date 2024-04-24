@@ -5,7 +5,7 @@ steps:
   args:
   - '-c'
   - |
-    gcloud deployment-manager deployments create mi-despliegue --config /ci/config.yaml 
+    gcloud deployment-manager deployments create mi-despliegue --config config.yaml 
 
 options:
   logging: CLOUD_LOGGING_ONLY
